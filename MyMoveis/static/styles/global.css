@@ -1,0 +1,56 @@
+* {   /*resert no css padrão do navegador*/
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html {
+    --black: #3D424A;
+    --orange: #FEAE49;
+    --blue: #57BEE6;
+    --gray-light: #E6E5DE;
+    --gray-dark: #C0C0BE;
+    --white: #ffffff;
+
+    /*1rem = 16px -> rsponsividade*/
+    font-size: 62.5%; /*10px*/
+}
+
+.sr-only {
+    position: absolute; /*o elementfo para de respeitar a posição dos demais elementos -> fica por cima de tudo*/
+    height: 1px; 
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden; /* sem barra de rolagem */
+    clip-path: rect(0, 0, 0, 0); /*0 para todas as direções; ele tá lá no cantinho*/
+    white-space: nowrap; /**/
+    border-width: 0; /**/
+} 
+
+body {
+    display: flex;
+    height: 100vh; /*view height -> compor toda a altura da tela; ou vw*/
+    background: var(--white); 
+}
+
+body, button, input, textarea, option, select {
+    font-size: clamp(16px, 1.6rem, 2vw); /*clamp -> intervalo de tamanho (minímo, padrão, máximo)*/
+    font-family: 'Poppins';
+}
+
+button:hover { 
+    filter: brightness(1.1); /*aplica um brilho*/
+}
+
+body::-webkit-scrollbar {
+    width: 1.2rem;   
+}
+
+body::-webkit-scrollbar-thumb {    /* color of the scroll thumb */
+    background-color: var(--gray-light);
+    border-radius: 2rem;       /* roundness of the scroll thumb */
+    border: .3rem solid var(--gray-light);  /* creates padding around scroll thumb */
+}
