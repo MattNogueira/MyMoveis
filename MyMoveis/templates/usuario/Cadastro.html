@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastro</title>
+        <link rel="shortcut icon" href="assets/MY.svg" type="image/x-icon"> <!--ícone na aba-->
+        <!-- fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+        <!-- style -->
+        <link rel="stylesheet" href="styles/global.css">
+        <link rel="stylesheet" href="styles/cadastro.css">
+    </head>
+    <body>
+        <div>
+            <header>
+                <img href="home.html" src="assets/logo (1).png" alt="MYmóveis - logo">
+            </header>
+        
+            <main>
+                <section>
+                    <h3>Nova Conta</h3>
+                    <form action="#">
+                        <label for="nome" class="sr-only">Nome</label>
+                        <input id="nome" type="text" name="Nome" placeholder="Nome" style="margin-top: 1.6rem;">
+        
+                        <label for="email" class="sr-only">Email</label>
+                        <input id="email" type="email" name="Email" placeholder="Email">
+        
+                        <label for="confEmail" class="sr-only">Confirme o seu email</label>
+                        <input id="confEmail" type="email" name="Confirmação do email" placeholder="Confirme o seu email">
+        
+                        <label for="senha" class="sr-only">Senha</label>
+                        <input id="senha" type="password" name="Senha" placeholder="Senha">
+        
+                        <label for="confSenha" class="sr-only">Confirme a sua senha</label>
+                        <input id="confSenha" type="password" name="Confirmação da senha" placeholder="Confirme a sua senha">
+        
+                        <button type="submit" href="login.html">Cadastrar</button>
+                    </form>
+                </section>
+    
+                <div class="termos">
+                    <div id="check">
+                        <input type="checkbox" name="selectedusers"/>
+                        <p>Concordo com os <a style="color: #FEAE49" href="#"> Termos de Uso </a> e <a style="color: #FEAE49" href="#"> Política de Privacidade </a> do grupo MYmóveis</p>
+                    </div>
+                    <p>Já possui uma conta? <a style="color: #FEAE49" href="login.html">Entre aqui</a></p>
+                </div>
+            </main>
+        
+            <footer>
+        
+            </footer>
+        </div>
+    </body>
+</html>
