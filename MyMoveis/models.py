@@ -1,10 +1,19 @@
+from django.contrib.auth.models import AbstractBaseUser
 from django.db import models
 
-class Usuario(models.Model):
+class Usuario(AbstractBaseUser):
     cpf = models.CharField(max_length=14, unique=True)
-    email = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50, unique=True)
+    #editei a field de email e adicionei:
+    USERNAME_FIELD = 'email'
     nome = models.CharField(max_length=50)
     sobrenome = models.CharField(max_length=50)
+    @property
+    def senha(self):
+        return self.password
+
+    def __str__(self):
+        return self.nome
 
 class Anunciante(Usuario):
     TIPOPESSOA_CHOICES = (

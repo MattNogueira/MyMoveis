@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block conteudo %}
+
+    <form method="post">
+        {%csrf_token%}
+        <div class="mb3">
+            {{frm.nome.label}}
+            {{frm.nome|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.sobrenome.label}}
+            {{frm.sobrenome|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.cpf.label}}
+            {{frm.cpf|add_class:'form-control'}}
+        </div>
+        <div class="mb3">
+            {{frm.email.label}}
+            {{frm.email|add_class:'form-control'}}
+        <div class="mb3">
+            {{frm.password.label}}
+            {{frm.password|add_class:'form-control'}}
+        </div>
+        <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-save"></i> Salvar
+        </button>
+    </form>
+
+
+{% endblock %}
