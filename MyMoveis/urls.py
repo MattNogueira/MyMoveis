@@ -18,10 +18,10 @@ from django.urls import path
 from MyMoveis.views import auth, pages
 
 urlpatterns = [
-
+    path('', pages.home, name='home'),
+    path('home', pages.home, name='home'),
     #urls of auth
     path('login', auth.login, name='login'),
-    path('home', pages.home, name='home'),
     path('logout', auth.logout, name='logout'),
-    path('cadastro',auth.cadastro,name='cadastro')
+    path('cadastro', auth.cadastro, name='cadastro')
 ]

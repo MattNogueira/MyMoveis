@@ -20,4 +20,8 @@ class Anunciante(Usuario):
         (u'F', u'Física'),
         (u'J', u'Jurídica'),
     )
-    tipoPessoa = models.CharField(max_length=8)
+    tipoPessoa = models.CharField(
+        max_length=1,
+        choices = TIPOPESSOA_CHOICES,
+        default='F')
+    

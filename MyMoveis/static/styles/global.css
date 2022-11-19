@@ -19,7 +19,7 @@ html {
 }
 
 .sr-only {
-    position: absolute; /*o elementfo para de respeitar a posição dos demais elementos -> fica por cima de tudo*/
+    position: absolute; /*o elemento para de respeitar a posição dos demais elementos -> fica por cima de tudo*/
     height: 1px; 
     width: 1px;
     padding: 0;

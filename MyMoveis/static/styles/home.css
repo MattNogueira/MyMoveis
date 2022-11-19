@@ -29,7 +29,7 @@ header img, button {
     margin-left: 3.5rem;
 }
 
-header div button {
+header div a button {
     background-color: var(--orange);
     color: var(--white);
     width: 15.113rem;

@@ -1,15 +1,51 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
+{% load static %}
+
+{% block styles %}
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'styles/login.css' %}">
+{% endblock %}
 
 {% block conteudo %}
+    <div>
+        <header>
+            <a href="{% url 'home' %}"><img src="{% static 'assets/logo (1).png' %}" alt="MYmóveis - logo"></a>
+        </header>
 
-    <h1>Login</h1>
+        <main>
+            <section>
+                <h3>Faça seu login</h3>
+                <form method="POST">
+                    {% csrf_token %}
 
-    <form method="POST">
-        {% csrf_token %}
-        {{ frm.as_p }}
-        <input type="submit" value="logar">
-    </form>
+                    <div class="form-group">
+                        <p>
+                            <label for="email" class="sr-only">Email</label>
+                            <input id="email" type="email" name="Email" placeholder="Email">
+                        </p>
+                    </div>
 
-    
+                    <div class="form-group">
+                        <p>
+                            <label for="senha" class="sr-only">Senha</label>
+                            <input id="senha" type="password" name="Senha" placeholder="Senha">
+                        </p>    
+                    </div>
+
+                    <div class="form-group">
+                        <p>
+                            <button type="submit" value="logar">Entrar</button>
+                        </p>    
+                    </div>
+
+                </form>
+            </section>
+
+            <div>
+                <a style="color: #FEAE49">Esqueci minha senha</a>
+                <p>Chegando agora? <a style="color: #FEAE49">Cadastre-se</a></p>
+            </div>
+        </main>
+    </div>
 {% endblock %}
