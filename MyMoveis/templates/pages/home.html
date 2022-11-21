@@ -13,23 +13,38 @@
             <img id="logo" src="{% static 'assets/logo.svg' %}" alt="MYmóveis - logo">
 
             <div class="list-choice-title"></div>
-                <div class="list-choice-objects">
+                <section class="list-choice-objects">
                   <label>
-                    <input type="radio" name="menu_option"/><span>January</span>
+                    <input type="radio" name="menu_option"/><span>A MYmóveis</span>
                   </label>
                   <label>
-                    <input type="radio" name="menu_option"/><span>February</span>
+                    <input type="radio" name="menu_option"/><span>Entrar</span>
                   </label>
                   <label>
-                    <input type="radio" name="menu_option"/><span>March</span>
+                    <input type="radio" name="menu_option"/><span>Cadastrar</span>
                   </label>
-                </div>
+                  <label>
+                    <input type="radio" name="menu_option"/><span>Comprar</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="menu_option"/><span>Alugar</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="menu_option"/><span>Anunciar</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="menu_option"/><span>Perguntas frequentes</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="menu_option"/><span>Fale conosco</span>
+                  </label>
+                </section>
               </div>
         </div>
         <div>
             <a href="{% url 'login' %}">
                 <button>
-                    <img style='align-items: center' src="{% static 'assets/user.svg' %}"/> Entrar
+                    <img style='align-items: center' src="{% static 'assets/user.svg' %}"/> Login
                 </button>
             </a>    
         </div>
