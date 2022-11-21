@@ -44,10 +44,11 @@ button {
 .list-choice-title {
     width: 100%;
     display: block;
-    text-align: center;
+    text-align: left;
+    font-weight: bold;
     padding: 0.55em 1em;
     box-sizing: border-box;
-    color: #FFF;
+    color: #000000;
     border-radius: 0.2em;
 }
 
@@ -60,11 +61,11 @@ button {
 }
 
 .list-choice input[type="radio"]+span {
-    color: #FFF;
-    background: #57bee6;
+    color: var(--black);
+    background: var(--white);
     padding: 0.55em 1em;
     display: block;
-    text-align: center;
+    text-align: left;
     box-sizing: border-box;
     cursor: pointer;
     width: 20%;
@@ -72,7 +73,7 @@ button {
 
 .list-choice-objects {
     position: absolute;
-    top: 0;
+    top: 5.1rem;
     padding-top: 2.1em;
     box-sizing: border-box;
     width: 100%;
@@ -84,19 +85,19 @@ button {
 .list-choice:hover .list-choice-objects input[type="radio"]+span {
     position: relative;
     top: 0;
-    transition: all 250ms ease-in-out;
+    transition: all 250ms ;
 }
 
 .list-choice:hover input[type="radio"]+span:hover {
-    background: #BBB;
+    background: var(--gray-light);
 }
 
 .list-choice:hover input[type="radio"]:checked+span:hover {
-    background: #74D68E;
+    background: var(--gray-dark);
 }
 
 .list-choice input[type="radio"]:checked+span {
-    background: #74D68E;
+    background: var(--gray-dark);
     position: absolute;
     top: 0em;
     border-radius: 0.2em;
