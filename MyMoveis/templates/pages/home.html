@@ -13,7 +13,7 @@
             <img id="logo" src="{% static 'assets/logo.svg' %}" alt="MYmóveis - logo">
 
             <div class="list-choice-title"></div>
-                <section class="list-choice-objects">
+                <section class="list-choice-objects" >
                   <label>
                     <input type="radio" name="menu_option"/><span>A MYmóveis</span>
                   </label>
@@ -30,6 +30,7 @@
                     <input type="radio" name="menu_option"/><span>Alugar</span>
                   </label>
                   <label>
+                    <a href="{% url 'anunciante' %}"></a>
                     <input type="radio" name="menu_option"/><span>Anunciar</span>
                   </label>
                   <label>

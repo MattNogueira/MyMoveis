@@ -50,3 +50,6 @@ def cadastro(request):
     return render(request, 'usuario/cadastro.html',{
         'frm':frm
     })
+
+def anunciante(request):
+    return render(request, 'auth/anunciante.html')
