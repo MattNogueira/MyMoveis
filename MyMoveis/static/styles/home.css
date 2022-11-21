@@ -153,14 +153,8 @@ main h2 {
     font-weight: 700;
 }
 
-<<<<<<< HEAD
 #local, #tipo {
     margin-top: 3.6rem;
-=======
-#acao,
-#tipo {
-    margin-bottom: 3.6rem;
->>>>>>> 3f315d953a0b360938c981a09618fe2fe58c2db2
 }
 
 #acao button {
