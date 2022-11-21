@@ -78,10 +78,11 @@ WSGI_APPLICATION = 'MyMoveis.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'mymoveis',
         'PASSWORD': '',
-        'USER': ''
+        'USER': 'root',
+        'PORT': '3307',
     }
 }
 
