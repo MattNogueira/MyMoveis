@@ -8,9 +8,23 @@
 
 {% block conteudo %}
     <header>
-        <div>
+        <div class="list-choice">
             <img id="menu" src="{% static 'assets/menu.svg' %}" alt="menu"/>
             <img id="logo" src="{% static 'assets/logo.svg' %}" alt="MYmóveis - logo">
+
+            <div class="list-choice-title"></div>
+                <div class="list-choice-objects">
+                  <label>
+                    <input type="radio" name="menu_option"/><span>January</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="menu_option"/><span>February</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="menu_option"/><span>March</span>
+                  </label>
+                </div>
+              </div>
         </div>
         <div>
             <a href="{% url 'login' %}">
