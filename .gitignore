@@ -1,0 +1,5 @@
+#Ignora o cache
+_pycache_
+
+#Ignora todos os arquivos e pastas que começam com settings.
+settings.*
