@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
+    "liveServer.settings.port": 5501
+=======
     "python.analysis.typeCheckingMode": "basic"
+>>>>>>> 3f315d953a0b360938c981a09618fe2fe58c2db2
 }

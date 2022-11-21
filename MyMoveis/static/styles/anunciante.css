@@ -3,7 +3,7 @@ body {
     justify-content: center;
 }
 
-body div header {
+body header {
     justify-content: center;
     margin-bottom: 2rem;
     margin-top: 8.9rem;
@@ -11,19 +11,31 @@ body div header {
     cursor: pointer;
 }
 
-body div main {
+body main {
     justify-content: center;
-    display: block;
+    display: grid;
     margin-left: auto;
     margin-right: auto;
 }
 
-section form {
-    display: grid;
+main section h3 {
+    margin-bottom: 1.6rem;
+    align-items: center;
+}
+
+form {
     justify-items: center;
 }
 
-section form input {
+#pessoa, .pessoa {
+    display: flex;
+}
+
+.pessoa p {
+    margin-left: 1.2rem;
+}
+
+form #nome, #cel, #cpf {
     border: .2rem solid var(--gray-dark);
     border-radius: .8rem;
     padding: 0 1.6rem;
@@ -47,40 +59,4 @@ main form button {
     border-radius: .8rem;
     text-align: center;
     cursor: pointer; 
-}
-
-.termos {
-   margin-top: 1.6rem;
-   display: block; 
-   justify-items:center;
-   width: 38.8rem;
-}
-
-#check {
-    display: flex;
-    vertical-align: middle;
-}
-
-#check p {
-    text-align: justify;
-}
-
-.termos input {
-    border: .2rem solid var(--gray-dark);
-    border-radius: .8rem;
-    margin-right: 1.3rem;
-    width: 2rem;
-    height: 2rem;
-}
-
-.termos div {
-    margin-bottom: 1.6rem;
-}
-
-.termos p {
-    text-align: center;
-}
-
-.termos a {
-    cursor: pointer;
 }

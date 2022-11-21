@@ -47,6 +47,6 @@ def cadastro(request):
         frm.save()
         return redirect('login')
 
-    return render(request, 'auth/cadastro.html',{
+    return render(request, 'usuario/cadastro.html',{
         'frm':frm
     })
