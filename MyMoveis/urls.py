@@ -20,6 +20,8 @@ from MyMoveis.views import auth, pages
 urlpatterns = [
     path('', pages.home, name='home'),
     path('home', pages.home, name='home'),
+    path('redsenha', pages.redSenha, name="redSenha"),
+    
     #urls of auth
     path('login', auth.login, name='login'),
     path('logout', auth.logout, name='logout'),
