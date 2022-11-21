@@ -10,11 +10,12 @@
 {% block conteudo %}
     <body>
         <div>
-            <header>
+            <div>
                 <a href="{% url 'home' %}"><img src="{% static 'assets/logo (1).png' %}" alt="MYmóveis - logo"></a>
-            </header>
+            </div>
         
             <main>
+
                 <section>
                     <h3>Nova Conta</h3>
                     <form action="#">
@@ -44,11 +45,9 @@
                     </div>
                     <p>Já possui uma conta? <a href="{% url 'login' %}" style="color: #FEAE49">Entre aqui</a></p>
                 </div>
+                
             </main>
-        
-            <footer>
-        
-            </footer>
+
         </div>
     </body>
 </html>
