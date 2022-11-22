@@ -1,5 +1,8 @@
 #Ignora o cache
-_pycache_
+*.pyc
 
 #Ignora todos os arquivos e pastas que começam com settings.
 settings.*
+
+#Ignora arquivos pessoais de IDE
+**/.vscode

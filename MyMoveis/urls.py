@@ -25,5 +25,6 @@ urlpatterns = [
     #urls of auth
     path('login', auth.login, name='login'),
     path('logout', auth.logout, name='logout'),
-    path('cadastro', auth.cadastro, name='cadastro')
+    path('cadastro', auth.cadastro, name='cadastro'),
+    path('anunciante', auth.anunciante, name='anunciante')
 ]
