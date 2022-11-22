@@ -29,7 +29,7 @@ def login(request):
             auth.login(request, usuario)
             return redirect('home')
         else:
-            frm.add_error(None, 'Usuário ou senha inválidos')
+            frm.add_error(None, 'Email ou senha inválidos.')
 
     return render(request, 'auth/login.html', {
         'frm':  frm
