@@ -66,6 +66,7 @@ header {
     text-align: left;
     box-sizing: border-box;
     cursor: pointer;
+    
 }
 
 .list-choice-objects {
@@ -77,6 +78,7 @@ header {
     overflow: hidden;
     max-height: 0;
     transition: all 250ms ease;
+
 }
 
 .list-choice:hover .list-choice-objects input[type="radio"]+span {
@@ -98,11 +100,13 @@ header {
     position: absolute;
     top: 0em;
     border-radius: 0.2em;
+    
 }
 
 .list-choice:hover input[type="radio"]:checked+span {
     border-radius: 0;
     position: absolute;
+    
 }
 
 .list-choice:hover .list-choice-objects label:nth-last-of-type(1) input[type="radio"]:checked+span {
@@ -110,7 +114,7 @@ header {
 }
 
 .list-choice:hover .list-choice-objects {
-    max-height: 540px;
+    max-height: 54rem;
 }
 
 header div a button {
@@ -133,13 +137,35 @@ header div button img {
 
 #bg {
     grid-area: left;
-    background: url('#') no-repeat top/contain;
+    background: no-repeat top/contain;
+    width: 73.7rem;
+    height: 72.4rem;
+    left: 2rem;
+    top: 3.2rem;
+    z-index: -500;
 }
 
-body div main {
-    grid-area: right;
+#imgbg {
+    position: absolute;
+    width: 63.6rem;
+    height: 44.8rem;
+    left: 6.7rem;
+    top: 15.2rem;
+    
+}
+
+#inputmain {
     width: 40.6rem;
     height: 75.5rem;
+    left: 74.1rem;
+    top: 0rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 14.1rem 4.1rem;
+    margin-top: -10rem;
+    box-sizing: border-box;
 }
 
 main div {
@@ -199,6 +225,7 @@ main h2 {
     font-weight: 500;
     font-size: 1.6rem;
     margin-top: 2rem;
+    box-sizing: border-box;
 }
 
 main div button {

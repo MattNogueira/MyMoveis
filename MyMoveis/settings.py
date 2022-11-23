@@ -82,7 +82,7 @@ DATABASES = {
         'NAME': 'mymoveis',
         'PASSWORD': '',
         'USER': 'root',
-        'PORT': '3306',
+        'PORT': '3307',
     }
 }
 
