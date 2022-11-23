@@ -14,39 +14,53 @@
             <div class="list-choice-title"></div>
                 <section class="list-choice-objects">
                   <label>
-                    <input type="radio" name="menu_option"/><span>A MYmóveis</span>
+                    <a href="{% url 'home' %}"><input type="radio" name="menu_option"/><span>A MYmóveis</span></a>
+                  </label>
+                  {% if not request.user.is_authenticated %}
+                    <label>
+                      <a href="{% url 'login' %}"><input type="radio" name="menu_option"/><span>Entrar</span></a>
+                    </label>
+                    <label>
+                      <a href="{% url 'cadastro' %}"><input type="radio" name="menu_option"/><span>Cadastrar</span></a>
+                    </label>
+                  {% else %}
+                  <label>
+                    <a href="{% url 'logout' %}"><input type="radio" name="menu_option"/><span>Logout</span></a>
                   </label>
                   <label>
-                    <input type="radio" name="menu_option"/><span>Entrar</span>
+                    <a href="{% url 'anunciante' %}"><input type="radio" name="menu_option"/><span>Anunciar</span></a>
+                  </label>
+                  {% endif %}
+                  <label>
+                    <a href="{% url '' %}"><input type="radio" name="menu_option"/><span>Comprar</span></a>
                   </label>
                   <label>
-                    <input type="radio" name="menu_option"/><span>Cadastrar</span>
+                    <a href="{% url '' %}"><input type="radio" name="menu_option"/><span>Alugar</span></a>
                   </label>
                   <label>
-                    <input type="radio" name="menu_option"/><span>Comprar</span>
+                    <a href="{% url '' %}"><input type="radio" name="menu_option"/><span>Perguntas frequentes</span></a>
                   </label>
                   <label>
-                    <input type="radio" name="menu_option"/><span>Alugar</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="menu_option"/><span>Anunciar</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="menu_option"/><span>Perguntas frequentes</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="menu_option"/><span>Fale conosco</span>
+                    <a href="{% url '' %}"><input type="radio" name="menu_option"/><span>Fale conosco</span></a>
                   </label>
                 </section>
               </div>
         </div>
         <img id="logo" src="{% static 'assets/logo.svg' %}" alt="MYmóveis - logo">
         <div>
+          {% if not request.user.is_authenticated %}
             <a href="{% url 'login' %}">
                 <button>
-                    <img style='align-items: center' src="{% static 'assets/user.svg' %}"/> {{usertext}}
+                  <img style='align-items: center' src="{% static 'assets/user.svg' %}"/> Login
                 </button>
-            </a>    
+            </a>   
+          {% else %}
+            <a href="{% url 'logout' %}">
+              <button>
+                <img style='align-items: center' src="{% static 'assets/user.svg' %}"/> Logout de {{request.user.nome}}
+              </button>
+            </a>  
+          {% endif %}
         </div>
     </header>
         

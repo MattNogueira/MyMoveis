@@ -18,6 +18,7 @@
 
             <section>
                 <h3>Nova Conta</h3>
+                {{frm.errors}}
                 <form method="POST">
                     {% csrf_token %}
                     {{frm.non_field_errors}}

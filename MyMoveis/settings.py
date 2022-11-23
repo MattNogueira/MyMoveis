@@ -80,7 +80,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mymoveis',
-        'PASSWORD': 'admin',
+        'PASSWORD': '',
         'USER': 'root',
         'PORT': '3306',
     }

@@ -42,7 +42,7 @@ class Usuario(AbstractBaseUser):
     USERNAME_FIELD = 'email'
     nome = models.CharField(max_length=50)
     sobrenome = models.CharField(max_length=50)
-    quarto = models.ForeignKey(Quarto, on_delete=models.SET_NULL, null=True, default='', related_name='UsuarioAlugaQuarto')
+    quarto = models.ForeignKey(Quarto, on_delete=models.SET_NULL, null=True, blank=True, related_name='UsuarioAlugaQuarto')
 
     @property
     def senha(self):

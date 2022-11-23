@@ -20,13 +20,16 @@ from MyMoveis.views import auth, pages, usuario, anunciante, imovel, quarto
 urlpatterns = [
     path('', pages.home, name=''),
     path('home', pages.home, name='home'),
-    path('redsenha', pages.redSenha, name="redSenha"),
     
     #urls of auth
     path('login', auth.login, name='login'),
     path('logout', auth.logout, name='logout'),
+    path('redsenha', pages.redSenha, name="redSenha"),
     
     #crud usuario
     path('cadastro', usuario.cadastro, name='cadastro'),
-    path('anunciante', pages.anunciante, name='anunciante')
+
+
+    #crud anunciante
+    path('anunciante', anunciante.cadastro, name='anunciante')
 ]

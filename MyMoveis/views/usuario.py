@@ -14,6 +14,18 @@ class UsuarioForm(ModelForm):
     def clean_password(self):
         return make_password(self.cleaned_data['password'])
 
+def lista(request):
+    return render(request, 'usuario/perfil.html', {
+    'usuarios': Usuario.objects.all(),
+})
+
+def perfil(request, id):
+    usuario = get_object_or_404(Usuario, pk=id)
+    data = UsuarioForm(request.GET or None, instance=usuario)
+    return render(request, 'usuario/perfil.html', {
+    'data':data
+})
+
 def cadastro(request):
 
     frm = UsuarioForm(request.POST or None)

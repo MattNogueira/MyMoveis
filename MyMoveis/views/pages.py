@@ -2,13 +2,7 @@ from django.shortcuts import render
 
 
 def home(request):
-    if request.user.is_authenticated:
-        ut = 'Bem Vindo,' + f'{request.usuario.nome}!'
-    else:
-        ut = 'Login'
-    return render(request, 'pages/home.html', {
-        'usertext':ut
-    })
+    return render(request, 'pages/home.html')
 
 def redSenha(request):
     return render(request, 'usuario/redefinir senha.html')
