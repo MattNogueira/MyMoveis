@@ -1,4 +1,3 @@
-from django.contrib.auth.decorators import login_required
 from django.shortcuts import render
 
 
@@ -7,3 +6,9 @@ def home(request):
 
 def redSenha(request):
     return render(request, 'usuario/redefinir senha.html')
+<<<<<<< HEAD
+=======
+
+def anunciante(request):
+    return render(request, 'auth/anunciante.html')
+>>>>>>> 9accebba09d559ed45c10090d1fdcdad3907feaa

@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block styles %}
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="{% static 'styles/cadastro.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+    <div>
+
+        <header>
+            <a href="{% url 'home' %}"><img src="{% static 'assets/logo (1).png' %}" alt="MYmóveis - logo"></a>
+        </header>
+
+        <main>
+
+            <section>
+                <h3>Nova Conta</h3>
+                {{frm.errors}}
+                <form method="POST">
+                    {% csrf_token %}
+                    {{frm.non_field_errors}}
+                    <div class="form-group">
+                        <label for="nome" class="sr-only">Nome</label>
+                        {{frm.nome|add_class:'form-control'|attr:"placeholder=Nome"|attr:"style='margin-top: 1.6rem'"}}
+                    </div>
+                    <div class="form-group">
+                        <label for="sobrenome" class="sr-only">Nome</label>
+                        {{frm.sobrenome|add_class:'form-control'|attr:"placeholder=Sobrenome"}}
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email</label>
+                        {{frm.email|add_class:'form-control'|attr:"placeholder=Email"}}
+                    </div>
+                    <div class="form-group">
+                        <label for="confEmail" class="sr-only">Confirme o seu email</label>
+                        <input id="confEmail" type="email" name="Confirmação do email" placeholder="Confirme o seu email">
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf" class="sr-only">CPF</label>
+                        {{frm.cpf|add_class:'form-control'|attr:"placeholder=CPF"}}
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="sr-only">Senha</label>
+                        {{frm.password|add_class:'form-control'|attr:"placeholder=Senha"}}
+                    </div>
+                    <div class="form-group">
+                        <label for="confSenha" class="sr-only">Confirme a sua senha</label>
+                        <input id="confSenha" type="password" name="Confirmação da senha" placeholder="Confirme a sua senha">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" href="{% url 'login' %}">Cadastrar</button>
+                    </div>
+                </form>
+            </section>
+
+            <div class="termos">
+                <div id="check">
+                    <input type="checkbox" name="selectedusers"/>
+                    <p>Concordo com os <a style="color: #FEAE49" href="#"> Termos de Uso </a> e <a style="color: #FEAE49" href="#"> Política de Privacidade </a> do grupo MYmóveis</p>
+                </div>
+                <p>Já possui uma conta? <a href="{% url 'login' %}" style="color: #FEAE49">Entre aqui</a></p>
+            </div>
+
+        </main>
+    </div>
+{% endblock %}

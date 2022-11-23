@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'styles/redSenha.css' %}">
+    <title>Verificação</title>
+{% endblock %}
+
+{% block conteudo %}
+    <div>
+        <header>
+            <img href="{% url 'home' %}" src="{% static 'assets/logo (1).png' %}" alt="MYmóveis - logo">
+        </header>
+        
+        <main>
+            <section>
+                <h3>Verifique o seu e-mail</h3>
+                <form action="#">
+                    <label for="cod" class="sr-only">Email<label>
+                    <input id="cod" type="number" name="Código de verificação" placeholder="Código de verificação">
+    
+                    <button type="submit">Verificar</button>
+                </form>
+            </section>
+        </main>
+        
+        <footer>
+        
+        </footer>
+    </div>
+{% endblock %}

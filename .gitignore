@@ -6,3 +6,6 @@ settings.*
 
 #Ignora arquivos pessoais de IDE
 **/.vscode
+
+#Ignora as migrações
+**/migrations

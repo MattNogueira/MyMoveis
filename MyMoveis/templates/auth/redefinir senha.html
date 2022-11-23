@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'styles/redSenha.css' %}">
+    <title>Redefinir senha</title>
+{% endblock %}
+
+{% block conteudo %}
+    <body>
+        <div>
+            <header>
+                <a href="{% url 'home' %}"><img src="{% static 'assets/logo (1).png' %}" alt="MYmóveis - logo"></a>
+            </header>
+        
+            <main>
+                <section>
+                    <h3>Informe o seu e-mail para redefinir sua senha</h3>
+                    <form action="#">
+                        <label for="email" class="sr-only">Email</label>
+                        <input id="email" type="email" name="Email" placeholder="Email" style="width: 100%">
+
+                        <button type="submit" style="width: 100%">Redefinir senha</button>
+                    </form>
+                </section>
+    
+                <a href="{% url 'login' %}" style="color: #FEAE49">Voltar para o login</a>
+    
+            </main>
+        
+            <footer>
+        
+            </footer>
+        </div>
+    </body>
+</html>
+{% endblock %}

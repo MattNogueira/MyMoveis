@@ -7,17 +7,31 @@
 {% endblock %}
 
 {% block conteudo %}
+<<<<<<< HEAD
     <header>
         <div class="list-choice">
             <img id="menu" src="{% static 'assets/menu.svg' %}" alt="menu"/>
             <div class="list-choice-title"></div>
                 <section class="list-choice-objects" >
+=======
+  <header>
+      <div class="list-choice">
+          <img id="menu" src="{% static 'assets/menu.svg' %}" alt="menu"/>
+
+          <div class="list-choice-title"></div>
+               <section class="list-choice-objects">
+                <label>
+                  <a href="{% url 'home' %}"><input type="radio" name="menu_option"/><span>A MYmóveis</span></a>
+                </label>
+                {% if not request.user.is_authenticated %}
+>>>>>>> 9accebba09d559ed45c10090d1fdcdad3907feaa
                   <label>
-                    <input type="radio" name="menu_option"/><span>A MYmóveis</span>
+                    <a href="{% url 'login' %}"><input type="radio" name="menu_option"/><span>Entrar</span></a>
                   </label>
                   <label>
-                    <input type="radio" name="menu_option"/><span>Entrar</span>
+                    <a href="{% url 'cadastro' %}"><input type="radio" name="menu_option"/><span>Cadastrar</span></a>
                   </label>
+<<<<<<< HEAD
                   <label>
                     <input type="radio" name="menu_option"/><span>Cadastrar</span>
                   </label>
@@ -53,34 +67,79 @@
     <div id="bg">
         <img src="{% static 'assets/bg.jfif' %}"/>
     </div>
-
-    <main>
-        <div>
-            <div id='acao'>
-                <h2>O que você deseja?</h2>   
-                <button type="">Alugar</button>
-                <button type="" id="comprar">Comprar</button>
+=======
+                {% else %}
+                <label>
+                  <a href="{% url 'logout' %}"><input type="radio" name="menu_option"/><span>Logout</span></a>
+                </label>
+                <label>
+                  <a href="{% url 'anunciante' %}"><input type="radio" name="menu_option"/><span>Anunciar</span></a>
+                </label>
+                {% endif %}
+                <label>
+                  <a href="{% url '' %}"><input type="radio" name="menu_option"/><span>Comprar</span></a>
+                </label>
+                <label>
+                  <a href="{% url '' %}"><input type="radio" name="menu_option"/><span>Alugar</span></a>
+                </label>
+                <label>
+                  <a href="{% url '' %}"><input type="radio" name="menu_option"/><span>Perguntas frequentes</span></a>
+                </label>
+                <label>
+                  <a href="{% url '' %}"><input type="radio" name="menu_option"/><span>Fale conosco</span></a>
+                </label>
+              </section>
             </div>
+      </div>
+      <img id="logo" src="{% static 'assets/logo.svg' %}" alt="MYmóveis - logo">
+      <div>
+        {% if not request.user.is_authenticated %}
+          <a href="{% url 'login' %}">
+              <button>
+                <img style='align-items: center' src="{% static 'assets/user.svg' %}"/> Login
+              </button>
+          </a>   
+        {% else %}
+          <a href="{% url 'logout' %}">
+            <button>
+              <img style='align-items: center' src="{% static 'assets/user.svg' %}"/> Logout de {{request.user.nome}}
+            </button>
+          </a>  
+        {% endif %}
+      </div>
+  </header>
+        
+  <div id="bg">
+      <img id="imgbg" src="{% static 'assets/bg.jfif' %}"/>
+  </div>
+>>>>>>> 9accebba09d559ed45c10090d1fdcdad3907feaa
 
-            <div id='tipo'>
-                <h2>Que tipo de imóvel?</h2>
-                <div>
-                    <label for="tipo" class="sr-only">Imóveis</label>
-                    <select id="tipo" name="Imóveis"  placeholder="Imóveis">
-                        <option value="Imóveis">Imóveis</option>
-                        <option value="Quarto">Quarto</option>
-                        <option value="Casa">Casa</option>
-                    </select>
-                </div>
-            </div>
+   <main id='inputmain'>
+      <div>
+          <div id='acao'>
+              <h2>O que você deseja?</h2>   
+              <button type="">Alugar</button>
+              <button type="" id="comprar">Comprar</button>
+          </div>
 
-            <div id='local'>
-                <h2>Qual a localidade?</h2>
-                <label for="local" class="sr-only">Que região você deseja?</label>
-                <input id="local" name="regiao" placeholder="Que região você deseja?">
-            </div>
+          <div id='tipo'>
+              <h2>Que tipo de imóvel?</h2>
+              <div>
+                  <label for="tipo" class="sr-only">Imóveis</label>
+                  <select id="tipo" name="Imóveis"  placeholder="Imóveis">
+                      <option value="Imóveis">Imóveis</option>
+                      <option value="Quarto">Quarto</option>
+                      <option value="Casa">Casa</option>
+                  </select>
+              </div>
+          </div>
 
+          <div id='local'>
+              <h2>Qual a localidade?</h2>
+              <label for="local" class="sr-only">Que região você deseja?</label>
+              <input id="local" name="regiao" placeholder="Que região você deseja?">
+          </div>
             <button type='submit'>Buscar</button>
-        </div>
-    </main>
+      </div>
+  </main>
 {% endblock %}

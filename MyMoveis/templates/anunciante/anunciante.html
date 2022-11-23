@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+{% load static %}
+
+{% block styles %}
+    <title>Anunciante</title>
+    <link rel="stylesheet" href="{% static 'styles/anunciante.css' %}">
+{% endblock %}
+
+{% block conteudo %}
+    <header>
+        <img href="{% url 'home' %}" src="{% static 'assets/logo (1).png' %}" alt="MYmóveis - logo">
+    </header>
+
+    <main>
+        <section>
+            <h3>Registrar como anunciante</h3>
+            <form action="#">
+
+                <label for="numddd" class="sr-only">DDD</label>
+                {{frm.numddd|add_class:'form-control'|attr:"placeholder=DDD"}}
+
+                <label for="numparc" class="sr-only">Celular</label>
+                {{frm.numparc|add_class:'form-control'|attr:"placeholder=Celular"}}
+    
+                <label for="tipoPessoa" class="sr-only">Tipo</label>
+                {{frm.tipoPessoa|add_class:'form-control'|attr:"placeholder=Tipo"}}
+    
+                <button type="submit">Registrar-se</button>
+            </form>
+        </section>
+    </main>
+{% endblock %}
