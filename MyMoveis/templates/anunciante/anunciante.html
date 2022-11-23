@@ -9,11 +9,13 @@
 
 {% block conteudo %}
     <header>
-        <img href="{% url 'home' %}" src="{% static 'assets/logo (1).png' %}" alt="MYmóveis - logo">
+        <div id="logoan">
+            <img href="{% url 'home' %}" src="{% static 'assets/logo (1).png' %}" alt="MYmóveis - logo">
+        </div>
     </header>
 
-    <main>
-        <section>
+    <main id="body">
+        <section id="mainpage">
             <h3>Registrar como anunciante</h3>
             <form action="#">
 

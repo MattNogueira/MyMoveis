@@ -57,14 +57,14 @@
         {% else %}
           <a href="{% url 'logout' %}">
             <button>
-              <img style='align-items: center' src="{% static 'assets/user.svg' %}"/> Logout de {{request.user.nome}}
+              <img style='align-items: center' src="{% static 'assets/user.svg' %}"/> {{request.user.nome}}
             </button>
           </a>  
         {% endif %}
       </div>
   </header>
         
-  <div id="bg">
+  <div>
       <img id="imgbg" src="{% static 'assets/bg.jfif' %}"/>
   </div>
 
