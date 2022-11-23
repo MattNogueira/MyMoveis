@@ -20,16 +20,17 @@ class Imovel(models.Model):
     mobiliado = models.BooleanField()
     cep = models.CharField(max_length=7)
     regrasuso = models.TextField()
-    preco = models.FloatField()
+    preco = models.DecimalField(max_digits=12, decimal_places=2)
     vagaest = models.IntegerField()
     endereco = models.CharField
     status = models.CharField(max_length=1, choices=STATUSNEGOCIO_CHOICES)
+    image = models.ImageField()
     anunciante = models.ForeignKey('Anunciante', on_delete=models.CASCADE, related_name='AnuncianteAnunciaImovel')
 
 class Quarto(models.Model):
     moradores = models.IntegerField()
     desc = models.TextField()
-    preco = models.FloatField()
+    preco = models.DecimalField(max_digits=5, decimal_places=2)
     vagast = models.IntegerField()
     imovel = models.ForeignKey(Imovel, on_delete=models.RESTRICT)
     anunciante = models.ForeignKey('Anunciante', on_delete=models.CASCADE, related_name='AnucianteAnunciaQuarto')
@@ -41,7 +42,7 @@ class Usuario(AbstractBaseUser):
     USERNAME_FIELD = 'email'
     nome = models.CharField(max_length=50)
     sobrenome = models.CharField(max_length=50)
-    quarto = models.ForeignKey(Quarto, on_delete=models.SET_NULL, null=True, related_name='UsuarioAlugaQuarto')
+    quarto = models.ForeignKey(Quarto, on_delete=models.SET_NULL, null=True, default='', related_name='UsuarioAlugaQuarto')
 
     @property
     def senha(self):
@@ -50,6 +51,7 @@ class Usuario(AbstractBaseUser):
     def __str__(self):
         return self.nome
 
+    #retorna o nome completo
     @property
     def nomecomp(self):
         return '%s %s' % (self.nome, self.sobrenome)

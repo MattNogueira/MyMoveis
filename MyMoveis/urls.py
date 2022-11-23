@@ -15,16 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from MyMoveis.views import auth, pages
+from MyMoveis.views import auth, pages, usuario, anunciante, imovel, quarto
 
 urlpatterns = [
-    path('', pages.home, name='home'),
+    path('', pages.home, name=''),
     path('home', pages.home, name='home'),
     path('redsenha', pages.redSenha, name="redSenha"),
     
     #urls of auth
     path('login', auth.login, name='login'),
     path('logout', auth.logout, name='logout'),
-    path('cadastro', auth.cadastro, name='cadastro'),
-    path('anunciante', auth.anunciante, name='anunciante')
+    
+    #crud usuario
+    path('cadastro', usuario.cadastro, name='cadastro'),
+    path('anunciante', pages.anunciante, name='anunciante')
 ]

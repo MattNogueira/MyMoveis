@@ -1,19 +1,6 @@
 from django.contrib import auth
 from django import forms
 from django.shortcuts import redirect, render
-from django.contrib.auth.hashers import make_password
-from django.forms import ModelForm
-from MyMoveis.models import Usuario
-
-class UsuarioForm(ModelForm):
-    class Meta:
-        model = Usuario
-        fields = '__all__'
-        widgets = {
-            'password': forms.PasswordInput()
-        }
-    def clean_password(self):
-        return make_password(self.cleaned_data['password'])
 
 class LoginForm(forms.Form):
     email = forms.EmailField(widget=forms.EmailInput, max_length=50)
@@ -37,19 +24,4 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('login')
-
-def cadastro(request):
-
-    frm = UsuarioForm(request.POST or None)
-
-    if frm.is_valid():
-        frm.save()
-        return redirect('login')
-
-    return render(request, 'auth/cadastro.html',{
-        'frm':frm
-    })
-
-def anunciante(request):
-    return render(request, 'auth/anunciante.html')
+    return redirect('home')
