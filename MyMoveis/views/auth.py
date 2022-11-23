@@ -25,18 +25,3 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('login')
-
-def cadastro(request):
-
-    frm = UsuarioForm(request.POST or None)
-
-    if frm.is_valid():
-        frm.save()
-        return redirect('login')
-
-    return render(request, 'auth/cadastro.html',{
-        'frm':frm
-    })
-
-def anunciante(request):
-    return render(request, 'auth/anunciante.html')

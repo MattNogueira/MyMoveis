@@ -7,13 +7,6 @@
 {% endblock %}
 
 {% block conteudo %}
-<<<<<<< HEAD
-    <header>
-        <div class="list-choice">
-            <img id="menu" src="{% static 'assets/menu.svg' %}" alt="menu"/>
-            <div class="list-choice-title"></div>
-                <section class="list-choice-objects" >
-=======
   <header>
       <div class="list-choice">
           <img id="menu" src="{% static 'assets/menu.svg' %}" alt="menu"/>
@@ -24,50 +17,12 @@
                   <a href="{% url 'home' %}"><input type="radio" name="menu_option"/><span>A MYmóveis</span></a>
                 </label>
                 {% if not request.user.is_authenticated %}
->>>>>>> 9accebba09d559ed45c10090d1fdcdad3907feaa
                   <label>
                     <a href="{% url 'login' %}"><input type="radio" name="menu_option"/><span>Entrar</span></a>
                   </label>
                   <label>
                     <a href="{% url 'cadastro' %}"><input type="radio" name="menu_option"/><span>Cadastrar</span></a>
                   </label>
-<<<<<<< HEAD
-                  <label>
-                    <input type="radio" name="menu_option"/><span>Cadastrar</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="menu_option"/><span>Comprar</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="menu_option"/><span>Alugar</span>
-                  </label>
-                  <label>
-                    <a href="{% url 'anunciante' %}"></a>
-                    <input type="radio" name="menu_option"/><span>Anunciar</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="menu_option"/><span>Perguntas frequentes</span>
-                  </label>
-                  <label>
-                    <input type="radio" name="menu_option"/><span>Fale conosco</span>
-                  </label>
-                </section>
-              </div>
-        </div>
-        <img id="logo" src="{% static 'assets/logo.svg' %}" alt="MYmóveis - logo">
-        <div>
-            <a href="{% url 'login' %}">
-                <button>
-                    <img style='align-items: center' src="{% static 'assets/user.svg' %}"/> Login
-                </button>
-            </a>    
-        </div>
-    </header>
-        
-    <div id="bg">
-        <img src="{% static 'assets/bg.jfif' %}"/>
-    </div>
-=======
                 {% else %}
                 <label>
                   <a href="{% url 'logout' %}"><input type="radio" name="menu_option"/><span>Logout</span></a>
@@ -112,7 +67,6 @@
   <div id="bg">
       <img id="imgbg" src="{% static 'assets/bg.jfif' %}"/>
   </div>
->>>>>>> 9accebba09d559ed45c10090d1fdcdad3907feaa
 
    <main id='inputmain'>
       <div>
