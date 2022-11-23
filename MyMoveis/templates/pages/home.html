@@ -10,8 +10,6 @@
     <header>
         <div class="list-choice">
             <img id="menu" src="{% static 'assets/menu.svg' %}" alt="menu"/>
-            <img id="logo" src="{% static 'assets/logo.svg' %}" alt="MYmóveis - logo">
-
             <div class="list-choice-title"></div>
                 <section class="list-choice-objects" >
                   <label>
@@ -42,6 +40,7 @@
                 </section>
               </div>
         </div>
+        <img id="logo" src="{% static 'assets/logo.svg' %}" alt="MYmóveis - logo">
         <div>
             <a href="{% url 'login' %}">
                 <button>
@@ -52,7 +51,7 @@
     </header>
         
     <div id="bg">
-        <img src="#"/>
+        <img src="{% static 'assets/bg.jfif' %}"/>
     </div>
 
     <main>

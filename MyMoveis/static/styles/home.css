@@ -25,16 +25,22 @@ header {
 }
 
 #logo {
-    margin-left: 3.5rem;
+    margin-top: -0.3rem;;
+    margin-left: 14.5rem;
+    position: absolute;
+    width: 6.2rem;
+    height: 4rem;
+    left: 4.5rem;
+    display: flex;
 }
 
 .list-choice input[type="radio"] {
     position: absolute;
-    left: -80px;
+    left: -8rem;
 }
 
 .list-choice-title {
-    width: 100%;
+    width: 20%;
     display: block;
     text-align: left;
     font-weight: bold;

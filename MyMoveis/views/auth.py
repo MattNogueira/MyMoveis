@@ -16,7 +16,7 @@ class UsuarioForm(ModelForm):
         return make_password(self.cleaned_data['password'])
 
 class LoginForm(forms.Form):
-    email = forms.EmailField(max_length=50)
+    email = forms.EmailField(widget=forms.EmailInput, max_length=50)
     senha = forms.CharField(widget=forms.PasswordInput)
 
 def login(request):
@@ -47,7 +47,7 @@ def cadastro(request):
         frm.save()
         return redirect('login')
 
-    return render(request, 'usuario/cadastro.html',{
+    return render(request, 'auth/cadastro.html',{
         'frm':frm
     })
 
