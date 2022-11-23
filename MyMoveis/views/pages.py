@@ -6,6 +6,3 @@ def home(request):
 
 def redSenha(request):
     return render(request, 'usuario/redefinir senha.html')
-
-def anunciante(request):
-    return render(request, 'auth/anunciante.html')

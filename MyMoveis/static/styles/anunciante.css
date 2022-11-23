@@ -10,8 +10,8 @@ body header img {
     display: block;
 }
 
-body main {
-    justify-content: center;
+#body {
+    align-items: center;
     display: grid;
     margin-left: auto;
     margin-right: auto;
@@ -32,6 +32,29 @@ section h3 {
     text-align: center;
     justify-items: center;
 }*/
+
+#body {
+    position: absolute;
+    left: 14.6rem;
+    top: 6.4rem;
+    text-align: center;
+    justify-items: center;
+}
+
+#mainpage {
+    position: absolute;
+    width: 114.7rem;
+    height: 75.6rem;
+    left: 24.9rem;
+    top: 25.4rem;
+    align-items: center;
+}
+
+#logoan {
+    position: absolute;
+    right: 87.1rem;
+    top: 15rem;
+}
 
 #pessoa {
     display: flex;

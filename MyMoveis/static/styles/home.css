@@ -27,6 +27,7 @@ header {
 #logo {
     margin-left: -0.3rem;
     margin-left: 14.5rem;
+    margin-top: -0.rem;
     position: absolute;
     width: 6.2rem;
     height: 4rem;
@@ -56,6 +57,7 @@ header {
 
 .list-choice-objects label:nth-last-of-type(1) span {
     border-radius: 0 0 0.2em 0.2em;
+
 }
 
 .list-choice input[type="radio"]+span {
@@ -135,23 +137,12 @@ header div button img {
 
 /*-----------------------------------------------------*/
 
-#bg {
-    grid-area: left;
-    background: no-repeat top/contain;
-    width: 73.7rem;
-    height: 72.4rem;
-    left: 2rem;
-    top: 3.2rem;
-    z-index: -500;
-}
 
 #imgbg {
     position: absolute;
-    width: 63.6rem;
-    height: 44.8rem;
-    left: 6.7rem;
-    top: 15.2rem;
-    
+    justify-content: center;
+    z-index: -500;
+    opacity: 0.6;
 }
 
 #inputmain {
