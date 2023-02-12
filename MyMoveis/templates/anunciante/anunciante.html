@@ -10,23 +10,34 @@
 {% block conteudo %}
     <header>
         <div id="logoan">
-            <img href="{% url 'home' %}" src="{% static 'assets/logo (1).png' %}" alt="MYmóveis - logo">
+            <a href="{% url 'home' %}"><img src="{% static 'assets/logo (1).png' %}" alt="MYmóveis - logo"></a>
         </div>
     </header>
 
     <main id="body">
         <section id="mainpage">
             <h3>Registrar como anunciante</h3>
-            <form action="#">
+            <form method="POST">
+                {% csrf_token %}
 
-                <label for="numddd" class="sr-only">DDD</label>
-                {{frm.numddd|add_class:'form-control'|attr:"placeholder=DDD"}}
+                {{frm.errors}}
 
-                <label for="numparc" class="sr-only">Celular</label>
-                {{frm.numparc|add_class:'form-control'|attr:"placeholder=Celular"}}
-    
-                <label for="tipoPessoa" class="sr-only">Tipo</label>
-                {{frm.tipoPessoa|add_class:'form-control'|attr:"placeholder=Tipo"}}
+                <div class="form-group">
+                    <p>
+                        <label for="numddd" class="sr-only  ">DDD</label>
+                        {{frm.numddd|add_class:'form-control'|attr:"placeholder=DDD"}}
+
+                        <label for="numparc" class="sr-only">Celular</label>
+                        {{frm.numparc|add_class:'form-control'|attr:"placeholder=Celular"}}   
+                    </p>
+                </div>
+                
+                <div class="form-group">
+                    <p>
+                        <label for="tipoPessoa" class="sr-only">Tipo</label>
+                        {{frm.tipoPessoa|add_class:'form-control'|attr:"placeholder=Tipo"}}
+                    </p>
+                </div>
     
                 <button type="submit">Registrar-se</button>
             </form>

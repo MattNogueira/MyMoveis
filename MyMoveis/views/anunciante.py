@@ -20,7 +20,7 @@ def cadastro(request):
 
     if frm.is_valid():
         frm.save()
-        return redirect('login')
+        return redirect('home')
 
     return render(request, 'anunciante/anunciante.html',{
         'frm':frm
